@@ -23,7 +23,7 @@ export { default as getUrlParams } from "./getUrlParams";
 export { default as hasClass } from "./hasClass";
 export { default as hexToRgba } from "./hexToRgba";
 export { default as hideTag } from "./hideTag";
-export { default as html } from "./html";
+export { default as htmlUtil } from "./htmlUtil";
 export { default as intersection } from "./intersection";
 export { default as isBrowserTabFocused } from "./isBrowserTabFocused";
 export { default as isEmptyObject } from "./isEmptyObject";

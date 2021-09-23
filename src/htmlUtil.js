@@ -1,4 +1,4 @@
-const html = {
+const HtmlUtil = {
   //1.用浏览器内部转换器实现HTML转码
   encode: function (html) {
     const div = document.createElement("div");
@@ -47,4 +47,4 @@ const html = {
   },
 };
 
-export default html;
+export default HtmlUtil;

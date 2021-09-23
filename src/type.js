@@ -153,6 +153,7 @@ export const isValidJSON = (val) => {
 
 const type = {
   isArray,
+  isString,
   isPlainObject,
   isRegExp,
   isDate,
@@ -161,6 +162,7 @@ const type = {
   isBoolean,
   isSymbol,
   isStatic,
+  isPrimitive,
   isUndefined,
   isNull,
   isArrayLike,

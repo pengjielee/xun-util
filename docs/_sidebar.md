@@ -1,5 +1,5 @@
 
-* [**简介**](guide.md)
+* [**简介**](intro.md)
 * [**数组**](cate/array.md)
 * [**函数**](cate/function.md)
 * [**字符串**](cate/string.md)

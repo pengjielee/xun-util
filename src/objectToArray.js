@@ -8,8 +8,8 @@ const objectToArray = (object) => {
   const arr = [];
   for (let key in object) {
     arr.push({
-      value: key,
-      label: object[key],
+      value: object[key],
+      key: key,
     });
   }
   return arr;

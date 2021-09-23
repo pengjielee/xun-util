@@ -1,26 +1,58 @@
-### isEnglish()
+导入
 
-### isChinese()
+```javascript
+import { reg } from 'xun-util';
+```
 
-### isEmail()
+### reg.isEnglish()
 
-### isNumber()
+是否是英文。
 
-### isDecimal()
+### reg.isChinese()
 
-### isUppercase()
+是否是中文。
 
-### isLowercase()
+### reg.isEmail()
 
-### isIDCard()
+是否是邮箱。
 
-### isChineseName()
+### reg.isNumber()
 
-### isEnglishName()
+是否是数字。
 
-### isLandlineTelephone()
+### reg.isDecimal()
 
-### isMobile()
+是否是小数。
 
-### isNumberAndLetter()
+### reg.isUppercase()
+
+是否是大写字母。
+
+### reg.isLowercase()
+
+是否是小写字母。
+
+### reg.isIDCard()
+
+是否是身份证号。
+
+### reg.isChineseName()
+
+是否是中文姓名。
+
+### reg.isEnglishName()
+
+是否是英文姓名。
+
+### reg.isLandlineTelephone()
+
+是否是座机电话。
+
+### reg.isMobile()
+
+是否是手机号。
+
+### reg.isNumberAndLetter()
+
+是否是数字和字母。
 

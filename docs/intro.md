@@ -1,7 +1,7 @@
 ## 安装
 
 ```bash
-npm install xun-util
+npm install xun-util --save
 ```
 
 ## 使用

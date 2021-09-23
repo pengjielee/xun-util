@@ -4,6 +4,12 @@
 import { average, randomInt,randomRange, sum  } from 'xun-util';
 ```
 
+导入
+
+```javascript
+import { arrayAllEqual } from 'xun-util';
+```
+
 
 ### average(array)
 
@@ -12,6 +18,10 @@ import { average, randomInt,randomRange, sum  } from 'xun-util';
 ```javascript
 average([1,1,1]); //output: 1
 ```
+
+### distance()
+
+计算两点间的距离。
 
 ### randomInt(min,[max])
 

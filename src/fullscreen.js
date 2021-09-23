@@ -2,7 +2,8 @@
  * 开启全屏/退出全屏
  */
 const fullscreen = {
-  open: (element) => {
+  open: () => {
+    const element = document.body;
     if (element.requestFullscreen) {
       element.requestFullscreen();
     } else if (element.mozRequestFullScreen) {

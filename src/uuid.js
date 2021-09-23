@@ -1,7 +1,7 @@
 /**
  * 生成唯一ID
  *
- * @return {[string]}
+ * @return {[String]}，返回生成的唯一ID
  */
 const uuid = () => {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {

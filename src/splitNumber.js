@@ -1,6 +1,12 @@
-export const splitNumber = (number) => {
-  var result = [];
-  var revArr = String(number).split("").reverse(); //整数部分倒序
+/**
+ * 使用逗号三位分割数字
+ *
+ * @param  {[Number]}
+ * @return {[String]}
+ */
+const splitNumber = (number) => {
+  const result = [];
+  const revArr = String(number).split("").reverse(); //整数部分倒序
   revArr.forEach(function (item, index) {
     result.push(item);
     if ((index + 1) % 3 === 0 && index != revArr.length - 1) {
@@ -9,3 +15,5 @@ export const splitNumber = (number) => {
   });
   return result.reverse().join("");
 };
+
+export default splitNumber;

@@ -1,4 +1,11 @@
-function deepClone(obj, hash = new WeakMap()) {
+/**
+ * 深拷贝
+ *
+ * @param  {[Object]}
+ * @param  {[WeakMap]}
+ * @return {[Object]}
+ */
+const deepClone = (obj, hash = new WeakMap()) => {
   if (obj instanceof RegExp) return new RegExp(obj);
   if (obj instanceof Date) return new Date(obj);
   if (obj === null || typeof obj != "object") {
@@ -21,4 +28,4 @@ function deepClone(obj, hash = new WeakMap()) {
     }
   }
   return t;
-}
+};

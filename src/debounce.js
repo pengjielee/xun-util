@@ -1,4 +1,11 @@
-export const debounce = (func, wait) => {
+/**
+ * 函数防抖
+ *
+ * @param  {[Function]}
+ * @param  {[Number]}
+ * @return {[void]}
+ */
+const debounce = (func, wait) => {
   let timer = null;
   return function () {
     let self = this,
@@ -9,3 +16,5 @@ export const debounce = (func, wait) => {
     }, wait);
   };
 };
+
+export default debounce;

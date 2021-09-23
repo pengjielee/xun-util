@@ -8,11 +8,13 @@ export const isArray = isType("Array");
 export const isString = isType("String");
 export const isObject = isType("Object");
 
-export const isEmpty = (obj) => {
-  return Object.keys(obj).length === 0 && obj.constructor === Object;
-};
+export const isNumber = (val) => typeof val === "number" && val === val;
 
-var isValidJSON = (str) => {
+export const isFunction = (val) => typeof val === "function";
+
+export const isBoolean = (val) => typeof val === "boolean";
+
+export const isValidJSON = (str) => {
   try {
     JSON.parse(str);
     return true;
@@ -21,23 +23,34 @@ var isValidJSON = (str) => {
   }
 };
 
-var isUndefined = (val) => val === undefined;
+export const isSymbol = (val) => typeof val === "symbol";
 
-const isSymbol = (val) => typeof val === "symbol";
-
-const isPromiseLike = (obj) =>
+export const isPromiseLike = (obj) =>
   obj !== null &&
   (typeof obj === "object" || typeof obj === "function") &&
   typeof obj.then === "function";
 
-const isPrimitive = (val) => Object(val) !== val;
+export const isObjectLike = (val) => val !== null && typeof val === "object";
 
-const isObjectLike = (val) => val !== null && typeof val === "object";
+export const isPrimitive = (val) => Object(val) !== val;
 
-const isNumber = (val) => typeof val === "number" && val === val;
+export const isUndefined = (val) => val === undefined;
 
-const isNull = (val) => val === null;
+export const isNull = (val) => val === null;
 
-const isFunction = (val) => typeof val === "function";
+const type = {
+  isBoolean,
+  isFunction,
+  isNull,
+  isNumber,
+  isObject,
+  isObjectLike,
+  isPromiseLike,
+  isPrimitive,
+  isArray,
+  isString,
+  isValidJSON,
+  isSymbol,
+};
 
-var isBoolean = (val) => typeof val === "boolean";
+export default type;

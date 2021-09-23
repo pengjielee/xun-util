@@ -1,4 +1,7 @@
-export const fullscreen = {
+/**
+ * 开启全屏/退出全屏
+ */
+const fullscreen = {
   open: (element) => {
     if (element.requestFullscreen) {
       element.requestFullscreen();
@@ -22,3 +25,5 @@ export const fullscreen = {
     }
   },
 };
+
+export default fullscreen;

@@ -1,4 +1,12 @@
-export const throttle = (func, wait, mustRun) => {
+/**
+ * 函数节流
+ *
+ * @param  {[Function]}
+ * @param  {[Number]}
+ * @param  {[Number]}
+ * @return {[void]}
+ */
+const throttle = (func, wait, mustRun) => {
   let timeout,
     startTime = new Date();
 
@@ -16,3 +24,4 @@ export const throttle = (func, wait, mustRun) => {
     }
   };
 };
+export default throttle;

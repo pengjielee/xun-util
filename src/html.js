@@ -1,32 +1,28 @@
-export const html = {
-  /*1.用浏览器内部转换器实现html转码*/
+const html = {
+  //1.用浏览器内部转换器实现HTML转码
   encode: function (html) {
-    //1.首先动态创建一个容器标签元素，如DIV
-    var temp = document.createElement("div");
-    //2.然后将要转换的字符串设置为这个元素的innerText(ie支持)或者textContent(火狐，google支持)
-    temp.textContent != undefined
-      ? (temp.textContent = html)
-      : (temp.innerText = html);
-    //3.最后返回这个元素的innerHTML，即得到经过HTML编码转换的字符串了
-    var output = temp.innerHTML;
-    temp = null;
+    const div = document.createElement("div");
+    div.textContent != undefined
+      ? (div.textContent = html)
+      : (div.innerText = html);
+    const output = div.innerHTML;
+    div = null;
     return output;
   },
-  /*2.用浏览器内部转换器实现html解码*/
+  //2.用浏览器内部转换器实现HTML解码
   decode: function (text) {
-    //1.首先动态创建一个容器标签元素，如DIV
-    var temp = document.createElement("div");
-    //2.然后将要转换的字符串设置为这个元素的innerHTML(ie，火狐，google都支持)
-    temp.innerHTML = text;
-    //3.最后返回这个元素的innerText(ie支持)或者textContent(火狐，google支持)，即得到经过HTML解码的字符串了。
-    var output = temp.innerText || temp.textContent;
-    temp = null;
+    const div = document.createElement("div");
+    div.innerHTML = text;
+    const output = div.innerText || div.textContent;
+    div = null;
     return output;
   },
-  /*3.用正则表达式实现html转码*/
-  encodeByRegExp: function (str) {
-    var s = "";
-    if (str.length == 0) return "";
+  //3.用正则表达式实现HTML转码
+  encodeByReg: function (str) {
+    let s = "";
+    if (str.length == 0) {
+      return "";
+    }
     s = str.replace(/&/g, "&amp;");
     s = s.replace(/</g, "&lt;");
     s = s.replace(/>/g, "&gt;");
@@ -35,10 +31,12 @@ export const html = {
     s = s.replace(/\"/g, "&quot;");
     return s;
   },
-  /*4.用正则表达式实现html解码*/
-  decodeByRegExp: function (str) {
-    var s = "";
-    if (str.length == 0) return "";
+  //4.用正则表达式实现HTML解码
+  decodeByReg: function (str) {
+    let s = "";
+    if (str.length == 0) {
+      return "";
+    }
     s = str.replace(/&amp;/g, "&");
     s = s.replace(/&lt;/g, "<");
     s = s.replace(/&gt;/g, ">");
@@ -48,3 +46,5 @@ export const html = {
     return s;
   },
 };
+
+export default html;

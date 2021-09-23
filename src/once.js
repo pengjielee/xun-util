@@ -1,4 +1,10 @@
-export const once = (fn) => {
+/**
+ * 函数只运行一次
+ *
+ * @param  {[Function]}
+ * @return {[void]}
+ */
+const once = (fn) => {
   let called = false;
   return function () {
     if (!called) {
@@ -7,3 +13,5 @@ export const once = (fn) => {
     }
   };
 };
+
+export default once;

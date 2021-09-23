@@ -1,4 +1,11 @@
-export const getQueryParams = (url, devide = "&") => {
+/**
+ * 获取URL参数
+ *
+ * @param  {[String]}
+ * @param  {[String]}
+ * @return {[Object]}
+ */
+const getQueryParams = (url, devide = "&") => {
   const idx = url.indexOf("?");
   if (idx < 0) {
     return null;
@@ -14,3 +21,5 @@ export const getQueryParams = (url, devide = "&") => {
   }
   return params;
 };
+
+export default getQueryParams;

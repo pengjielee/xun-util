@@ -1,4 +1,11 @@
-export const hexToRgba = (hex, alpha) => {
+/**
+ * 16进制颜色值转为rgba
+ *
+ * @param  {[String]}
+ * @param  {[Number]}
+ * @return {[String]}
+ */
+const hexToRgba = (hex, alpha) => {
   if (!hex || typeof alpha !== "number" || alpha > 1 || alpha < 0) {
     return "";
   }
@@ -16,3 +23,5 @@ export const hexToRgba = (hex, alpha) => {
 
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
+
+export default hexToRgba;

@@ -1,4 +1,9 @@
-export const getLocation = () => {
+/**
+ * 获取地理位置
+ *
+ * @return {[Promise]}
+ */
+const getLocation = () => {
   return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -17,3 +22,4 @@ export const getLocation = () => {
     }
   });
 };
+export default getLocation;

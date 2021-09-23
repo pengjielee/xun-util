@@ -19,3 +19,17 @@ export const isSafari = () => ua.indexOf("Safari") > -1;
 
 export const isBrowser = () =>
   ![typeof window, typeof document].includes("undefined");
+
+const env = {
+  isDev,
+  isProd,
+  isWechat,
+  isAndroid,
+  isIphone,
+  isMobile,
+  isIpad,
+  isSafari,
+  isBrowser,
+};
+
+export default env;

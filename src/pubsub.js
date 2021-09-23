@@ -1,7 +1,11 @@
+/**
+ * 发布订阅模式
+ * @type {Object}
+ */
 const pubsub = {};
 
 (function (q) {
-  var topics = {},
+  let topics = {},
     subUid = -1;
 
   // Publish or broadcast events of interest
@@ -12,7 +16,7 @@ const pubsub = {};
       return false;
     }
 
-    var subscribers = topics[topic],
+    const subscribers = topics[topic],
       len = subscribers ? subscribers.length : 0;
 
     while (len--) {
@@ -31,7 +35,7 @@ const pubsub = {};
       topics[topic] = [];
     }
 
-    var token = (++subUid).toString();
+    const token = (++subUid).toString();
     topics[topic].push({
       token: token,
       func: func,
@@ -43,9 +47,9 @@ const pubsub = {};
   // topic, based on a tokenized reference
   // to the subscription
   q.unsubscribe = function (token) {
-    for (var m in topics) {
+    for (let m in topics) {
       if (topics[m]) {
-        for (var i = 0, j = topics[m].length; i < j; i++) {
+        for (let i = 0, j = topics[m].length; i < j; i++) {
           if (topics[m][i].token === token) {
             topics[m].splice(i, 1);
             return token;

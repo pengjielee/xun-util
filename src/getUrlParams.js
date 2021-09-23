@@ -5,7 +5,7 @@
  * @param  {[String]}
  * @return {[Object]}
  */
-const getQueryParams = (url, devide = "&") => {
+const getUrlParams = (url, devide = "&") => {
   const idx = url.indexOf("?");
   if (idx < 0) {
     return null;
@@ -22,4 +22,4 @@ const getQueryParams = (url, devide = "&") => {
   return params;
 };
 
-export default getQueryParams;
+export default getUrlParams;

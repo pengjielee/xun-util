@@ -29,3 +29,5 @@ const deepClone = (obj, hash = new WeakMap()) => {
   }
   return t;
 };
+
+export default deepClone;

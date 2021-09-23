@@ -1,13 +1,13 @@
 {
   "name": "xun-util",
-  "version": "1.0.1",
-  "description": "工具类合集",
+  "version": "1.0.2",
+  "description": "我的工具类合集",
   "main": "dist/index.js",
   "module": "es/index.js",
   "scripts": {
-    "test": "mocha -r esm test/*.test.js",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "test": "mocha -r esm test/*.test.js",
     "pt": "prettier --write src/ test/",
     "docs:serve": "docsify serve docs"
   },

@@ -5,7 +5,7 @@
 > 我的工具类合集
 
 
-[Gitee](https://gitee.com/pengjielee/xun-util)
+[Github](https://github.com/pengjielee/xun-util)
 [Get Started](guide.md)
 
 

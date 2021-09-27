@@ -1,7 +1,16 @@
 导入
 
 ```javascript
-import { arrayAllEqual } from 'xun-util';
+import {
+  arrayAllEqual,
+  castArray,
+  countInArray,
+  difference,
+  flatArray,
+  objectToArray,
+  intersection,
+  uniqueArray,
+} from "xun-util";
 ```
 
 ### arrayAllEqual(array)
@@ -9,11 +18,9 @@ import { arrayAllEqual } from 'xun-util';
 判断数组中的所有元素是否相等。
 
 ```javascript
-arrayAllEqual([1,1,1]);
-//output: true
+arrayAllEqual([1,1,1]);//output: true
 
-arrayAllEqual([1,1,2]);
-//output: false
+arrayAllEqual([1,1,2]);//output: false
 ```
 
 ### castArray(value)
@@ -21,8 +28,7 @@ arrayAllEqual([1,1,2]);
 转为数组。
 
 ```javascript
-castArray(1);
-//output: [1]
+castArray(1); //output: [1]
 
 castArray(true);
 //ouput: [true]
@@ -33,8 +39,7 @@ castArray(true);
 目标值在数组中出现次数。
 
 ```javascript
-countInArray([1,1,2],1);
-//output: 2
+countInArray([1,1,2],1); //output: 2
 ```
 
 ### difference(array1,array2)
@@ -42,8 +47,7 @@ countInArray([1,1,2],1);
 返回第一个数组独有的元素。
 
 ```javascript
-difference([1,2,3],[2]);
-//output: [1,3]
+difference([1,2,3],[2]); //output: [1,3]
 ```
 
 ### flatArray(array)
@@ -51,8 +55,7 @@ difference([1,2,3],[2]);
 数组扁平化。
 
 ```javascript
-flatArray([1,2,3,[1,2]]);
-//output: [1,2,3,1,2]
+flatArray([1,2,3,[1,2]]); //output: [1,2,3,1,2]
 ```
 
 ### objectToArray(object)
@@ -60,8 +63,7 @@ flatArray([1,2,3,[1,2]]);
 对象转为数组。
 
 ```javascript
-objectToArray({ name: 'jim', age: 20 });
-//output: [ {key: 'name', value: 'jim'},{key: 'age', value: 20}, ]
+objectToArray({ name: 'jim', age: 20 }); //output: [ {key: 'name', value: 'jim'},{key: 'age', value: 20}, ]
 ```
 
 ### intersection(array1,array2)
@@ -69,8 +71,7 @@ objectToArray({ name: 'jim', age: 20 });
 返回两个数组的交集。
 
 ```javascript
-intersection([1,2],[2,3]);
-//output: [2]
+intersection([1,2],[2,3]); //output: [2]
 ```
 
 ### uniqueArray(array)
@@ -78,6 +79,5 @@ intersection([1,2],[2,3]);
 数组去除重复元素。
 
 ```javascript
-uniqueArray([1,2,3,2]);
-//output: [1,2,3]
+uniqueArray([1,2,3,2]); //output: [1,2,3]
 ```

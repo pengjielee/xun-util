@@ -5,14 +5,17 @@
  * @param  {[Number]}
  * @return {[void]}
  */
-const debounce = (func, wait) => {
+const debounce = (fn, wait) => {
+  if (typeof fn !== "function") {
+    throw new TypeError("Expected a function");
+  }
   let timer = null;
   return function () {
     let self = this,
       args = arguments;
     timer && clearTimeout(timer);
     timer = setTimeout(function () {
-      func.apply(self, args);
+      fn.apply(self, args);
     }, wait);
   };
 };

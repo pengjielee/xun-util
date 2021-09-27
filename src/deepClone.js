@@ -12,7 +12,7 @@ const deepClone = (obj, hash = new WeakMap()) => {
     return obj; // 如果不是复杂数据类型，直接返回
   }
   if (hash.has(obj)) {
-    return has.get(obj);
+    return hash.get(obj);
   }
   /**
    * 如果obj是数组，那么 obj.constructor 是 [Function: Array]

@@ -1,7 +1,7 @@
 const HtmlUtil = {
   //1.用浏览器内部转换器实现HTML转码
   encode: function (html) {
-    const div = document.createElement("div");
+    let div = document.createElement("div");
     div.textContent != undefined
       ? (div.textContent = html)
       : (div.innerText = html);
@@ -11,7 +11,7 @@ const HtmlUtil = {
   },
   //2.用浏览器内部转换器实现HTML解码
   decode: function (text) {
-    const div = document.createElement("div");
+    let div = document.createElement("div");
     div.innerHTML = text;
     const output = div.innerText || div.textContent;
     div = null;

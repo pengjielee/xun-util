@@ -101,14 +101,6 @@ export const isLandlineTelephone = (value) =>
  */
 export const isMobile = (value) => /1\d{10}/.test(value);
 
-/**
- * 是否是数字和字母
- *
- * @param  {[String]}
- * @return {[Boolean]}
- */
-export const isNumberAndLetter = (value) => /^[A-Za-z0-9]+$/g.test(value);
-
 const reg = {
   isEnglish,
   isChinese,
@@ -122,7 +114,6 @@ const reg = {
   isEnglishName,
   isLandlineTelephone,
   isMobile,
-  isNumberAndLetter,
 };
 
 export default reg;

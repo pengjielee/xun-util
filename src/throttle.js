@@ -6,7 +6,10 @@
  * @param  {[Number]}
  * @return {[void]}
  */
-const throttle = (func, wait, mustRun) => {
+const throttle = (fn, wait, mustRun) => {
+  if (typeof fn !== "function") {
+    throw new TypeError("Expected a function");
+  }
   let timeout,
     startTime = new Date();
 
@@ -17,10 +20,10 @@ const throttle = (func, wait, mustRun) => {
 
     clearTimeout(timeout);
     if (curTime - startTime >= mustRun) {
-      func.apply(context, args);
+      fn.apply(context, args);
       startTime = curTime;
     } else {
-      timeout = setTimeout(func, wait);
+      timeout = setTimeout(fn, wait);
     }
   };
 };

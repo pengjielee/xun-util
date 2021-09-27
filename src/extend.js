@@ -5,9 +5,14 @@
  * @param  {[Object]}
  * @return {[Object]}
  */
-const extend = (to, _from) => {
-  for (let key in _form) {
-    to[key] = _form[key];
+const extend = (from, to = {}) => {
+  for (let key in from) {
+    if (typeof from[key] === "object") {
+      to[key] = Array.isArray(from[key]) ? [] : {};
+      extend(from[key], to[key]);
+    } else {
+      to[key] = from[key];
+    }
   }
   return to;
 };

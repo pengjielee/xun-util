@@ -10,5 +10,5 @@ npm install xun-util --save
 import { uuid, sum } from 'xun-util';
 
 console.log(uuid());
-console.log(sum(1,2));
+console.log(sum([1,2])); //3
 ```

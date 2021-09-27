@@ -6,6 +6,7 @@
  */
 const splitNumber = (number) => {
   const result = [];
+  number = parseInt(number, 10);
   const revArr = String(number).split("").reverse(); //整数部分倒序
   revArr.forEach(function (item, index) {
     result.push(item);

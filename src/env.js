@@ -1,10 +1,6 @@
-export const isDev = process.env.NODE_ENV == "development";
-
-export const isProd = process.env.NODE_ENV == "production";
+const ua = window.navigator.userAgent;
 
 export const isWechat = /MicroMessenger/i.test(ua);
-
-const ua = window.navigator.userAgent;
 
 export const isAndroid = () =>
   ua.indexOf("Android") > -1 || u.indexOf("Linux") > -1;
@@ -19,6 +15,12 @@ export const isSafari = () => ua.indexOf("Safari") > -1;
 
 export const isBrowser = () =>
   ![typeof window, typeof document].includes("undefined");
+
+export const isDev =
+  (!isBrowser && process.env.NODE_ENV == "development") || true;
+
+export const isProd =
+  (!isBrowser && process.env.NODE_ENV == "production") || false;
 
 export const isIE = ua && /msie|trident/.test(ua);
 

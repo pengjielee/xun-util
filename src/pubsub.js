@@ -16,7 +16,7 @@ const pubsub = {};
       return false;
     }
 
-    const subscribers = topics[topic],
+    let subscribers = topics[topic],
       len = subscribers ? subscribers.length : 0;
 
     while (len--) {

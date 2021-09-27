@@ -16,13 +16,14 @@ export const formatNumber = (n) => {
  * @return {[String]}
  */
 export const formatDate = (date) => {
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
+  date = date || new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
 
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
 
   return (
     [year, month, day].map(formatNumber).join("/") +

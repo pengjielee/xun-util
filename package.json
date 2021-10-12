@@ -1,6 +1,6 @@
 {
   "name": "xun-util",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "我的工具类合集",
   "main": "dist/index.js",
   "module": "es/index.js",

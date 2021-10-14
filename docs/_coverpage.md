@@ -6,7 +6,7 @@
 
 
 [Github](https://github.com/pengjielee/xun-util)
-[Get Started](guide.md)
+[Get Started](README.md)
 
 
 <!-- background color -->

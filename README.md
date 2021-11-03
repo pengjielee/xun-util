@@ -16,3 +16,8 @@
 npm install xun-util -save
 ```
 
+## 访问
+
+https://xun-util.pengjielee.cn/#/  
+
+https://pengjielee.github.io/xun-util/#/  
